@@ -21,6 +21,7 @@ RUN groupadd -g $GID $USER \
 #install xacro package (additional necessarity when not using the ur-package from ros)
 USER root
 RUN apt-get update && apt-get install -y ros-humble-rclcpp
+RUN apt-get update && apt-get install -y ros-humble-rosidl-default-generators
 USER ${USER}
 
 # Setup workpace

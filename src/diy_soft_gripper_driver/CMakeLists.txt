@@ -7,9 +7,23 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
+
+#generate service interface header from srv config file (generate the new custom message for the service)
+rosidl_generate_interfaces(${PROJECT_NAME}
+  srv/gripper_service_description_spec.srv
+)
+
+#Build the service server
+add_executable(server src/gripper_service_server.cpp)
+ament_target_dependencies(server rclcpp ${PROJECT_NAME}_rosidl_typesupport_cpp)
+
+#Build the service client
+add_executable(client src/gripper_service_client.cpp)
+ament_target_dependencies(client rclcpp ${PROJECT_NAME}_rosidl_typesupport_cpp)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -22,5 +36,22 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+
+#INSTALL executables (e.g. server and client)
+install(TARGETS
+  server
+  client
+  DESTINATION lib/${PROJECT_NAME})
+
+ #INSTALL directories to specific destination 
+install(
+    DIRECTORY include/
+    DESTINATION include
+  )
+install(DIRECTORY
+    srv
+    DESTINATION share/${PROJECT_NAME}/srv
+  )
 
 ament_package()
