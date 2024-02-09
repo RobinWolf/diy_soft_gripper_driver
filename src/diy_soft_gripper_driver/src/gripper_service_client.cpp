@@ -1,6 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-//#include "diy_soft_gripper_driver/gripper_service_description_spec.hpp"
-#include "diy_soft_gripper_driver/srv/Gripper.hpp"
+#include "gripper_srv_interface/srv/gripper.hpp"
 
 int main(int argc, char **argv)
 {

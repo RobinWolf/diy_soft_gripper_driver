@@ -1,6 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-//#include "diy_soft_gripper_driver/gripper_service_description_spec.hpp"
-#include "diy_soft_gripper_driver/srv/Gripper.hpp"
+#include "gripper_srv_interface/srv/gripper.hpp"
 #include "diy_soft_gripper_driver/DataFormat.hpp"
 #include "diy_soft_gripper_driver/RobotConnection.hpp"
 
@@ -25,7 +24,7 @@ public:
       return;
     }
 
-    // Service-Callback for gripper server
+    // Service-Callback for gripper server (connects to the interface defined in the gripper_srv_interface package)
     auto grip_cb = [this](const std::shared_ptr<diy_soft_gripper_driver::srv::Gripper::Request> request,
                           std::shared_ptr<diy_soft_gripper_driver::srv::Gripper::Response> response) -> void {
 
