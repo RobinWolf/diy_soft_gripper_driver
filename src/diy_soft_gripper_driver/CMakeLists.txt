@@ -13,7 +13,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 #generate service interface header from srv config file (generate the new custom message for the service)
 rosidl_generate_interfaces(${PROJECT_NAME}
-  srv/gripper.srv
+  srv/Gripper.srv
 )
 
 #Build the service server
