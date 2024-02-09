@@ -19,14 +19,14 @@ int main(int argc, char **argv)
   }
 
   auto client = rclcpp::Node::make_shared("gripper_control_client");
-  auto grip_client = client->create_client<diy_soft_gripper_driver::srv::Gripper>("gripper_control");
+  auto grip_client = client->create_client<gripper_interface::srv::Gripper>("gripper_control"); //imports the service interfaces from the gripper_interface packages
 
   while (!grip_client->wait_for_service(std::chrono::seconds(1)))
   {
     RCLCPP_INFO(client->get_logger(), "Wait for gripper service inztialization...");
   }
 
-  auto request = std::make_shared<diy_soft_gripper_driver::srv::Gripper::Request>();
+  auto request = std::make_shared<gripper_interface::srv::Gripper::Request>();  //imports the request definition from the srv file in gripper_interface package
   request->cmd = cmd;
 
   // send the service call from the cilient to the server
