@@ -9,7 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
-find_package(gripper_interface) #this package is also in this container and defines the service with its messages (they are requested and responsed by the client and server node)
+find_package(gripper_srv_interface) #this package is also in this container and defines the service with its messages (they are requested and responsed by the client and server node)
 
 
 #Build the service server
