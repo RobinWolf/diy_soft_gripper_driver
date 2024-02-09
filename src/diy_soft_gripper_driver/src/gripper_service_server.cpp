@@ -1,5 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-#include "gripper_srv_interface/srv/gripper.hpp"
+#include "gripper_interface/srv/gripper.hpp"
 #include "diy_soft_gripper_driver/DataFormat.hpp"
 #include "diy_soft_gripper_driver/RobotConnection.hpp"
 
@@ -36,7 +36,7 @@ public:
 
         if (!robotConnection.sendData())
         {
-          RCLCPP_ERROR(this->get_logger(), "Error sending data to the robot.");
+          RCLCPP_ERROR(this->get_logger(), "ERROR sending data to the robot.");
           response->status = false;
         }
 
@@ -45,7 +45,7 @@ public:
 
         if (!robotConnection.readData())
         {
-          RCLCPP_ERROR(this->get_logger(), "Error receiving data from the robot.");
+          RCLCPP_ERROR(this->get_logger(), "ERROR receiving data from the robot.");
           response->status = false;
         }
         else

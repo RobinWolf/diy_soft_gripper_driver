@@ -1,5 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-#include "gripper_srv_interface/srv/gripper.hpp"
+#include "gripper_interface/srv/gripper.hpp"
 
 int main(int argc, char **argv)
 {
@@ -7,14 +7,14 @@ int main(int argc, char **argv)
 
   if (argc != 2)
   {
-    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "Bitte geben Sie den Befehl (0 oder 1) als Argument ein.");
+    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "please pass 0 (open) od 1 (close)");
     return 1;
   }
 
   int cmd = std::stoi(argv[1]);
   if (cmd != 0 && cmd != 1)
   {
-    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "Ungültiger Befehl. Bitte geben Sie 0 oder 1 als Argument ein.");
+    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "invalid input argument - please pass 0 (open) od 1 (close)");
     return 1;
   }
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 
   while (!grip_client->wait_for_service(std::chrono::seconds(1)))
   {
-    RCLCPP_INFO(client->get_logger(), "Warte auf den Gripper-Service...");
+    RCLCPP_INFO(client->get_logger(), "Wait for gripper service inztialization...");
   }
 
   auto request = std::make_shared<diy_soft_gripper_driver::srv::Gripper::Request>();
@@ -36,18 +36,18 @@ int main(int argc, char **argv)
   if (rclcpp::spin_until_future_complete(client, result_future) !=
       rclcpp::FutureReturnCode::SUCCESS)
   {
-    RCLCPP_ERROR(client->get_logger(), "Fehler beim Empfangen der Antwort vom Server.");
+    RCLCPP_ERROR(client->get_logger(), "ERROR recieved no answer from the server.");
     return 1;
   }
 
   auto response = result_future.get();
   if (response->status)
   {
-    RCLCPP_INFO(client->get_logger(), "Eingabe akzeptiert. Greifer %s", (cmd ? "schließen" : "öffnen"));
+    RCLCPP_INFO(client->get_logger(), "input correct. gripper %s", (cmd ? "close" : "open"));
   }
   else
   {
-    RCLCPP_ERROR(client->get_logger(), "Fehler beim Steuern des Greifers.");
+    RCLCPP_ERROR(client->get_logger(), "ERROR while controlling the gripper.");
     return 1;
   }
 
