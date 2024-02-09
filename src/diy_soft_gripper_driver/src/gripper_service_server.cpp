@@ -1,6 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "gripper_interface/srv/gripper.hpp"
-#include "diy_soft_gripper_driver/DataFormat.hpp"
+//#include "diy_soft_gripper_driver/DataFormat.hpp
 #include "diy_soft_gripper_driver/RobotConnection.hpp"
 
 class GripperControlServer : public rclcpp::Node
@@ -25,8 +25,8 @@ public:
     }
 
     // Service-Callback for gripper server (connects to the interface defined in the gripper_srv_interface package)
-    auto grip_cb = [this](const std::shared_ptr<diy_soft_gripper_driver::srv::Gripper::Request> request,
-                          std::shared_ptr<diy_soft_gripper_driver::srv::Gripper::Response> response) -> void {
+    auto grip_cb = [this](const std::shared_ptr<gripper_interface::srv::Gripper::Request> request,          //import the request and control interfaces from the srv in gripper_interface package
+                          std::shared_ptr<gripper_interface::srv::Gripper::Response> response) -> void {
 
       RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Incoming request cmd: %d", request->cmd);
 

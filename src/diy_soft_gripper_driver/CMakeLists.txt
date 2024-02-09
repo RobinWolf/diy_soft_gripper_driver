@@ -9,16 +9,16 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
-find_package(gripper_interface) #this package is also in this container and defines the service with its messages (they are requested and responsed by the client and server node)
+find_package(gripper_interface REQUIRED) #this package is also in this container and defines the service with its messages (they are requested and responsed by the client and server node)
 
 
 #Build the service server
 add_executable(server src/gripper_service_server.cpp)
-ament_target_dependencies(server rclcpp) 
+ament_target_dependencies(server rclcpp gripper_interface) 
 
 #Build the service client
 add_executable(client src/gripper_service_client.cpp)
-ament_target_dependencies(client rclcpp)
+ament_target_dependencies(client rclcpp gripper_interface)
 
 
 if(BUILD_TESTING)
@@ -38,12 +38,25 @@ endif()
 install(TARGETS
   server
   client
-  DESTINATION lib/${PROJECT_NAME})
+  DESTINATION lib
+)
 
 #INSTALL directories to specific destination (only include for the used headers)
 install(
     DIRECTORY include/
     DESTINATION include
-  )
+)
+
+install(
+    DIRECTORY include
+    DESTINATION include
+)
+
+#EXPORT include directory
+include_directories(include)
+
+ament_export_include_directories(
+  include
+)
   
 ament_package()
