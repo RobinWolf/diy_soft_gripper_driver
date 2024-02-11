@@ -1,0 +1,57 @@
+[0.077s] Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver': CMAKE_PREFIX_PATH=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface:/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver:/home/mathias/ros2_ws/install/diy_robotics_gripper:/home/mathias/ros2_ws/install/gripper_interface:/home/mathias/ros2_ws/install/cpp_srvcli_gripper:/home/mathias/ros2_ws/install/cpp_service:/opt/ros/humble /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver -- -j16 -l16
+[0.103s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.229s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.255s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.257s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.263s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.274s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.288s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.338s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.339s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.466s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.600s] -- Found gripper_interface: 0.0.0 (/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/cmake)
+[0.614s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.679s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.680s] -- Configured cppcheck include dirs: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/include
+[0.680s] -- Configured cppcheck exclude dirs and/or files: 
+[0.680s] -- Added test 'lint_cmake' to check CMake code style
+[0.681s] -- Added test 'uncrustify' to check C / C++ code style
+[0.682s] -- Configured uncrustify additional arguments: 
+[0.682s] -- Added test 'xmllint' to check XML markup files
+[0.683s] -- Configuring done
+[0.695s] -- Generating done
+[0.696s] -- Build files have been written to: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver
+[0.725s] [35m[1mConsolidate compiler generated dependencies of target server[0m
+[0.725s] [35m[1mConsolidate compiler generated dependencies of target client[0m
+[0.749s] [ 75%] [32mBuilding CXX object CMakeFiles/client.dir/src/gripper_service_client.cpp.o[0m
+[0.749s] [ 75%] Built target server
+[3.674s] [100%] [32m[1mLinking CXX executable client[0m
+[3.831s] [100%] Built target client
+[3.845s] Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver' returned '0': CMAKE_PREFIX_PATH=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface:/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver:/home/mathias/ros2_ws/install/diy_robotics_gripper:/home/mathias/ros2_ws/install/gripper_interface:/home/mathias/ros2_ws/install/cpp_srvcli_gripper:/home/mathias/ros2_ws/install/cpp_service:/opt/ros/humble /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver -- -j16 -l16
+[3.881s] Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver': CMAKE_PREFIX_PATH=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface:/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver:/home/mathias/ros2_ws/install/diy_robotics_gripper:/home/mathias/ros2_ws/install/gripper_interface:/home/mathias/ros2_ws/install/cpp_srvcli_gripper:/home/mathias/ros2_ws/install/cpp_service:/opt/ros/humble /usr/bin/cmake --install /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver
+[3.888s] -- Install configuration: ""
+[3.888s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib/server
+[3.888s] -- Installing: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib/client
+[3.890s] -- Set runtime path of "/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib/client" to ""
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/include
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/include/diy_soft_gripper_driver
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/include/diy_soft_gripper_driver/DataFormat.hpp
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/include/diy_soft_gripper_driver/helpers.hpp
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/include/diy_soft_gripper_driver/RobotConnection.hpp
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/ament_index/resource_index/package_run_dependencies/diy_soft_gripper_driver
+[3.890s] -- Installing: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/ament_index/resource_index/parent_prefix_path/diy_soft_gripper_driver
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/environment/ament_prefix_path.sh
+[3.890s] -- Installing: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/environment/ament_prefix_path.dsv
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/environment/path.sh
+[3.890s] -- Installing: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/environment/path.dsv
+[3.890s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/local_setup.bash
+[3.891s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/local_setup.sh
+[3.891s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/local_setup.zsh
+[3.891s] -- Installing: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/local_setup.dsv
+[3.891s] -- Installing: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.dsv
+[3.891s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/ament_index/resource_index/packages/diy_soft_gripper_driver
+[3.891s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.891s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/cmake/diy_soft_gripper_driverConfig.cmake
+[3.891s] -- Up-to-date: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/cmake/diy_soft_gripper_driverConfig-version.cmake
+[3.891s] -- Installing: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.xml
+[3.894s] Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver' returned '0': CMAKE_PREFIX_PATH=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface:/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver:/home/mathias/ros2_ws/install/diy_robotics_gripper:/home/mathias/ros2_ws/install/gripper_interface:/home/mathias/ros2_ws/install/cpp_srvcli_gripper:/home/mathias/ros2_ws/install/cpp_service:/opt/ros/humble /usr/bin/cmake --install /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver
