@@ -17,7 +17,7 @@ docker build \
   --build-arg UID="$uid" \
   --build-arg GID="$gid" \
   -f dev.Dockerfile \
-  -t diy-softgripper-espDriver/ros-render:"$ROS_DISTRO" .
+  -t diy-softgripper-esp-driver/ros-render:"$ROS_DISTRO" .
 
 ##############################################################################
 ##                            Run the container                             ##
@@ -32,6 +32,6 @@ docker run \
   --net=host \
   -v "$SRC_HOST":"$SRC_CONTAINER":rw \
   -e DISPLAY="$DISPLAY" \
-  diy-softgripper-espDriver/ros-render:"$ROS_DISTRO" bash
+  diy-softgripper-esp-driver/ros-render:"$ROS_DISTRO" bash
 
 # display and network access is already passed to the container
