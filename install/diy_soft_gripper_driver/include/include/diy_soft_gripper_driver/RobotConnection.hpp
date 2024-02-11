@@ -29,7 +29,7 @@ struct RobotConnectionArgs {
 } connectionConfig;
 
 Communication::PcToRobot_t sendToGripper;
-Communication::RobotToPc_t recivedFromGripper;
+Communication::RobotToPc_t receivedFromGripper;
 
 pthread_t threadId_;
 
@@ -40,39 +40,36 @@ private:
 
   uint64_t sendTime = 0;
   int bytesSent = 0;
-  uint64_t recivedFromGripperTime_;
+  uint64_t receivedFromGripperTime_;
 
 
-  bool newMessageRevceived_ = false;
+  bool newMessageReceived_ = false;
  
 
 public:
-  bool cmd_gripper;   // Befehl an Greifer: 0- Greifer öffnen, 1- Greifer schließen
+  bool cmd_gripper;   // Command to gripper: 0- Open gripper, 1- Close gripper
 
 
 
-  // Function to read the data recivedFromGripper from the robot.
+  // Function to read the data received from the robot.
   bool readData() {
-    //std::cout << "readData()" << std::endl;
-    //std::cout << "bytesSent = " << bytesSent << std::endl;
-    if (bytesSent == 0) return true;  // Return if no recivedFromGripper is expected
+    if (bytesSent == 0) return true;  // Return if no data is expected
 
     // Read data from the socket
-    int bytesReceived = recv(socketConnection_, &recivedFromGripper, sizeof(recivedFromGripper), 0);
-    //std::cout << "bytesReceived = " << bytesReceived << std::endl;
-
+    int bytesReceived = recv(socketConnection_, &receivedFromGripper, sizeof(receivedFromGripper), 0);
+ 
     if (bytesReceived == -1) {
-        std::cerr << "Fehler beim Empfangen von Daten vom Roboter." << std::endl;
+        std::cerr << "Error receiving data from the robot." << std::endl;
         return false;
     } else if (bytesReceived == 0) {
-        std::cerr << "Die Verbindung wurde geschlossen." << std::endl;
+        std::cerr << "The connection has been closed." << std::endl;
         return false;
     }
 
-    recivedFromGripperTime_ = MyUtils::micros() - sendTime;   // Calculate the communication delay
+    receivedFromGripperTime_ = MyUtils::micros() - sendTime;   // Calculate the communication delay
 
     // Output gripper state
-    std::cout << "Antwort Roboter: Gripper State = " << (recivedFromGripper.gripperState ? "Closed" : "Open") << std::endl;
+    std::cout << "Robot response: Gripper State = " << (receivedFromGripper.gripperState ? "Closed" : "Open") << std::endl;
 
     return true;
 }
@@ -80,7 +77,7 @@ public:
 bool sendData() {
     sendToGripper.messageNumber++;
 
-    // Setze den Greiferzustand im Anfragepaket
+    // Set the gripper state in the request packet
     sendToGripper.setGripper = cmd_gripper;
 
     // Start the communication delay measurement and send the data to the robot:

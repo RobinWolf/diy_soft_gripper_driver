@@ -26,7 +26,7 @@ namespace Communication {
       uint8_t reserved[1];
 
       bool enablePower;
-      bool setGripper;  // 0- Greifer öffnen, 1- Greifer schließen
+      bool setGripper;  // 0- Open gripper, 1- Close gripper
     };
 
     uint8_t receiveBuffer[64];
@@ -40,7 +40,7 @@ namespace Communication {
       uint8_t reserved[1];
 
       bool active;
-      bool gripperState;   // 0- Greifer offen, 1- Greifer geschlossen 
+      bool gripperState;   // 0- Gripper open, 1- Gripper closed 
 
     };
     uint8_t sendBuffer[64];
