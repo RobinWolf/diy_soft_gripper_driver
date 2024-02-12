@@ -7,13 +7,11 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-#
+
 find_package(rosidl_default_generators REQUIRED)
 
-#this codeline converts the service configuration in this package (Gripper.srv) to a usable interface,
-#the interface will be used by the server and client node in the other package (diy_soft_gripper_driver) 
-rosidl_generate_interfaces(${PROJECT_NAME}  
-  "srv/Gripper.srv"
+rosidl_generate_interfaces(${PROJECT_NAME}
+  srv/Gripper.srv
 )
 
 if(BUILD_TESTING)

@@ -1,0 +1,2 @@
+Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface': /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface -- -j16 -l16
+Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface' returned '2': /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface -- -j16 -l16
