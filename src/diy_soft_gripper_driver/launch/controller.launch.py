@@ -17,22 +17,29 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "gripper_ip",
-            default_value='"192.168.212.202"',
+            default_value="192.168.212.202",
             description="The IP-Adress with which the gripper hardware joins the common network",
         )
     )
     declared_arguments.append(
         DeclareLaunchArgument(
             "gripper_port",
-            default_value='"80"',
+            default_value="80",
             description="The Port which is used by the gripper hardware",
         )
     )  
     declared_arguments.append(
         DeclareLaunchArgument(
             "gripper_ssid",
-            default_value='"DIY-Robotics"',
+            default_value="DIY-Robotics",
             description="The SSID from the common network (PC and ESP must be member of this network)",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "default_state",
+            default_value="0",
+            description="The default state of the gripper after launching the control node (0: closed, 1: open)",
         )
     )
 
@@ -40,6 +47,8 @@ def generate_launch_description():
     gripper_ip = LaunchConfiguration("gripper_ip")
     gripper_ssid = LaunchConfiguration("gripper_ssid")
     gripper_port = LaunchConfiguration("gripper_port")
+    default_state = LaunchConfiguration("default_state")
+
 
 
 
@@ -49,12 +58,13 @@ def generate_launch_description():
     server_node= Node(
         package='diy_soft_gripper_driver',
         executable='server',
-        parameters=[{'gripper_IP_adress': gripper_ip, 'gripper_Port': gripper_port}] 
+        arguments=[{gripper_ip}, {gripper_port}]
     )
     #Client
     client_node= Node(
         package='diy_soft_gripper_driver',
         executable='client',
+        arguments=[{default_state}]
     )
 
     nodes_to_start = [
