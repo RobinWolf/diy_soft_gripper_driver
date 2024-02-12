@@ -1,25 +1,26 @@
 #include "rclcpp/rclcpp.hpp"
 #include "gripper_interface/srv/gripper.hpp"
-//#include "diy_soft_gripper_driver/DataFormat.hpp
 #include "diy_soft_gripper_driver/RobotConnection.hpp"
 
 class GripperControlServer : public rclcpp::Node
 {
 public:
-  GripperControlServer(const std::string& robot_ip_address, uint8_t robot_port)
+  GripperControlServer(const std::string& gripper_ip_adress)
       : Node("gripper_control_server"), robotConnection()
   {
     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Server Initializing...");
 
     // Attempt to connect to the gripper
+    uint8_t gripper_port = 80;
+
     std::string errorMessage;
-    if (robotConnection.initialize(robot_ip_address, "", errorMessage))
+    if (robotConnection.initialize(gripper_ip_adress, "", errorMessage))
     {
-      RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Successfully connected to the gripper at %s:%d", robot_ip_address.c_str(), robot_port);
+      RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Successfully connected to the gripper at %s:%d", gripper_ip_adress.c_str(), gripper_port);
     }
     else
     {
-      RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to connect to the gripper at %s:%d", robot_ip_address.c_str(), robot_port);
+      RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to connect to the gripper at %s:%d", gripper_ip_adress.c_str(), gripper_port);
       rclcpp::shutdown();
       return;
     }
@@ -76,14 +77,14 @@ int main(int argc, char **argv)
   rclcpp::init(argc, argv);
 
   if (argc < 3) {
-    RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Usage: %s <robot_ip_address> <robot_port>", argv[0]);
+    RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Usage: %s <gripper_ip_adress> <gripper_port>", argv[0]);
     return 1;
   }
 
-  std::string robot_ip_address = argv[1];
-  uint8_t robot_port = std::atoi(argv[2]);
+  std::string gripper_ip_adress = argv[1];
+  uint8_t gripper_port = std::atoi(argv[2]);
 
-  auto gripper_control_server = std::make_shared<GripperControlServer>(robot_ip_address, robot_port);
+  auto gripper_control_server = std::make_shared<GripperControlServer>(gripper_ip_adress, gripper_port);
 
   rclcpp::spin(gripper_control_server);
   rclcpp::shutdown();
