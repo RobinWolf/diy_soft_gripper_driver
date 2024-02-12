@@ -40,6 +40,10 @@ install(
     DESTINATION include
 )
 
+install(DIRECTORY
+  launch  
+  DESTINATION share/${PROJECT_NAME}/
+)
 #EXPORT include directory
 include_directories(include)
 

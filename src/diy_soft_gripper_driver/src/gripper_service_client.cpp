@@ -7,47 +7,47 @@ int main(int argc, char **argv)
 
   if (argc != 2)
   {
-    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "please pass 0 (open) or 1 (close)");
+    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "Bitte geben Sie den Befehl (0 oder 1) als Argument ein.");
     return 1;
   }
 
   int cmd = std::stoi(argv[1]);
   if (cmd != 0 && cmd != 1)
   {
-    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "invalid input argument - please pass 0 (open) or 1 (close)");
+    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "Ungültiger Befehl. Bitte geben Sie 0 oder 1 als Argument ein.");
     return 1;
   }
 
   auto client = rclcpp::Node::make_shared("gripper_control_client");
-  auto grip_client = client->create_client<gripper_interface::srv::Gripper>("gripper_control"); //imports the service interfaces from the gripper_interface packages
+  auto grip_client = client->create_client<gripper_interface::srv::Gripper>("gripper_control");
 
   while (!grip_client->wait_for_service(std::chrono::seconds(1)))
   {
-    RCLCPP_INFO(client->get_logger(), "Waiting for gripper service initialization...");
+    RCLCPP_INFO(client->get_logger(), "Warte auf den Gripper-Service...");
   }
 
-  auto request = std::make_shared<gripper_interface::srv::Gripper::Request>();  //imports the request definition from the srv file in gripper_interface package
+  auto request = std::make_shared<gripper_interface::srv::Gripper::Request>();
   request->cmd = cmd;
 
-  // send the service call from the client to the server
+  // Senden des Service-Aufrufs
   auto result_future = grip_client->async_send_request(request);
 
-  // wait for answer from the service server node
+  // Warte auf die Antwort
   if (rclcpp::spin_until_future_complete(client, result_future) !=
       rclcpp::FutureReturnCode::SUCCESS)
   {
-    RCLCPP_ERROR(client->get_logger(), "ERROR: Received no answer from the server.");
+    RCLCPP_ERROR(client->get_logger(), "Fehler beim Empfangen der Antwort vom Server.");
     return 1;
   }
 
   auto response = result_future.get();
   if (response->status)
   {
-    RCLCPP_INFO(client->get_logger(), "Input correct. Gripper %s", (cmd ? "close" : "open"));
+    RCLCPP_INFO(client->get_logger(), "Eingabe akzeptiert. Greifer %s", (cmd ? "schließen" : "öffnen"));
   }
   else
   {
-    RCLCPP_ERROR(client->get_logger(), "ERROR: Failed to control the gripper.");
+    RCLCPP_ERROR(client->get_logger(), "Fehler beim Steuern des Greifers.");
     return 1;
   }
 

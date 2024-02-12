@@ -20,6 +20,13 @@ def generate_launch_description():
             default_value='"192.168.212.202"',
             description="The IP-Adress with which the gripper hardware joins the common network",
         )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "gripper_port",
+            default_value='"80"',
+            description="The Port which is used by the gripper hardware",
+        )
     )  
     declared_arguments.append(
         DeclareLaunchArgument(
@@ -32,6 +39,8 @@ def generate_launch_description():
 
     gripper_ip = LaunchConfiguration("gripper_ip")
     gripper_ssid = LaunchConfiguration("gripper_ssid")
+    gripper_port = LaunchConfiguration("gripper_port")
+
 
 
 
@@ -39,13 +48,13 @@ def generate_launch_description():
     #Server
     server_node= Node(
         package='diy_soft_gripper_driver',
-        executable='gripper_service_server.py',
-        parameters=[{'gripper_IP_adress': gripper_ip}] 
+        executable='server',
+        parameters=[{'gripper_IP_adress': gripper_ip, 'gripper_Port': gripper_port}] 
     )
     #Client
     client_node= Node(
         package='diy_soft_gripper_driver',
-        executable='gripper_service_client.py',
+        executable='client',
     )
 
     nodes_to_start = [

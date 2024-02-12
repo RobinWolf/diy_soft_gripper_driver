@@ -5,15 +5,13 @@
 class GripperControlServer : public rclcpp::Node
 {
 public:
-  GripperControlServer(const std::string& gripper_ip_adress)
+  GripperControlServer(const std::string& gripper_ip_adress, uint8_t gripper_port)
       : Node("gripper_control_server"), robotConnection()
   {
     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Server Initializing...");
 
     // Attempt to connect to the gripper
-    uint8_t gripper_port = 80;
-
-    std::string errorMessage;
+        std::string errorMessage;
     if (robotConnection.initialize(gripper_ip_adress, "", errorMessage))
     {
       RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Successfully connected to the gripper at %s:%d", gripper_ip_adress.c_str(), gripper_port);
