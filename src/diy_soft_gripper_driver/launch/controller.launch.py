@@ -64,8 +64,8 @@ def generate_launch_description():
     client_node= Node(
         package='diy_soft_gripper_driver',
         executable='client',
-        arguments=[{default_state}]
-        # arguments=[]
+        arguments=[{default_state}] # for gripper_service_client_single_request
+        # arguments=[]      # for gripper_service_client --> 1 or 0 is passed into the terminal after starting the client
     )
 
     nodes_to_start = [
