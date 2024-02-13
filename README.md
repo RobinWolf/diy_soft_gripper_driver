@@ -12,8 +12,14 @@ This Package contains to the whole DIY-Robotics series, please refer to the main
 2. ./run_dev.sh
 3. colcon build
 4. source install/setup.bash
+
+### start nodes with ros2 run ...
 5. ros2 run diy_soft_gripper_driver server < IP-Adress> < Port> (e.g.: ros2 run diy_soft_gripper_driver server 192.168.212.202 80)
 6. Open second Terminal
 7. docker ps --> find out the ID of the docker container  
 8. docker exec -it < Container ID> bash 
 9. ros2 run diy_soft_gripper_driver client <0 to open, 1 to close the gripper>
+
+
+### or start nodes with launch file
+5. ros2 launch diy_soft_gripper_driver controller.launch.py
