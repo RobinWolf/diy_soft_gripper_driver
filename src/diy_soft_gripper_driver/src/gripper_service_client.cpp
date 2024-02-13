@@ -1,20 +1,16 @@
 #include "rclcpp/rclcpp.hpp"
 #include "gripper_interface/srv/gripper.hpp"
+#include <iostream>
 
 int main(int argc, char **argv)
 {
   rclcpp::init(argc, argv);
 
-  if (argc != 2)
+  if (argc != 1 && std::string(argv[1]) != "--ros-args")    // (--ros-args seems to automatically added by ROS2 when using ros2 launch)
   {
-    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "Bitte geben Sie den Befehl (0 oder 1) als Argument ein.");
-    return 1;
-  }
-
-  int cmd = std::stoi(argv[1]);
-  if (cmd != 0 && cmd != 1)
-  {
-    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "Ungültiger Befehl. Bitte geben Sie 0 oder 1 als Argument ein.");
+    RCLCPP_ERROR(
+        rclcpp::get_logger("gripper_control_client"),
+        "This client does not expect any arguments, but received: %s", argv[1]);
     return 1;
   }
 
@@ -23,32 +19,62 @@ int main(int argc, char **argv)
 
   while (!grip_client->wait_for_service(std::chrono::seconds(1)))
   {
-    RCLCPP_INFO(client->get_logger(), "Warte auf den Gripper-Service...");
+    RCLCPP_INFO(client->get_logger(), "Waiting for the gripper service...");
   }
 
-  auto request = std::make_shared<gripper_interface::srv::Gripper::Request>();
-  request->cmd = cmd;
+  rclcpp::Rate rate(10);  // Adjust the rate as needed
 
-  // Senden des Service-Aufrufs
-  auto result_future = grip_client->async_send_request(request);
+  while (rclcpp::ok())
+  {
+    std::cout << "Please enter the command (0 or 1) ('q' to quit): ";
+    std::string input;
+    std::getline(std::cin, input);
 
-  // Warte auf die Antwort
-  if (rclcpp::spin_until_future_complete(client, result_future) !=
-      rclcpp::FutureReturnCode::SUCCESS)
-  {
-    RCLCPP_ERROR(client->get_logger(), "Fehler beim Empfangen der Antwort vom Server.");
-    return 1;
-  }
+    if (input == "q")
+    {
+      break;
+    }
 
-  auto response = result_future.get();
-  if (response->status)
-  {
-    RCLCPP_INFO(client->get_logger(), "Eingabe akzeptiert. Greifer %s", (cmd ? "schließen" : "öffnen"));
-  }
-  else
-  {
-    RCLCPP_ERROR(client->get_logger(), "Fehler beim Steuern des Greifers.");
-    return 1;
+    try
+    {
+      int cmd = std::stoi(input);
+      if (cmd != 0 && cmd != 1)
+      {
+        RCLCPP_ERROR(client->get_logger(), "Invalid command. Please enter 0 or 1 as an argument.");
+        continue;
+      }
+
+      auto request = std::make_shared<gripper_interface::srv::Gripper::Request>();
+      request->cmd = cmd;
+
+      // Send the service call
+      auto result_future = grip_client->async_send_request(request);
+
+      // Wait for the response
+      if (rclcpp::spin_until_future_complete(client, result_future) !=
+          rclcpp::FutureReturnCode::SUCCESS)
+      {
+        RCLCPP_ERROR(client->get_logger(), "Error receiving response from the server.");
+        return 1;
+      }
+
+      auto response = result_future.get();
+      if (response->status)
+      {
+        RCLCPP_INFO(client->get_logger(), "Input accepted. Gripper %s", (cmd ? "close" : "open"));
+      }
+      else
+      {
+        RCLCPP_ERROR(client->get_logger(), "Error controlling the gripper.");
+        return 1;
+      }
+    }
+    catch (const std::invalid_argument &e)
+    {
+      RCLCPP_ERROR(client->get_logger(), "Invalid input. Please enter 0 or 1 as an argument.");
+    }
+
+    rate.sleep();
   }
 
   rclcpp::shutdown();
