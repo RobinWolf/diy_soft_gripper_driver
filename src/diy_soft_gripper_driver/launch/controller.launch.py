@@ -65,6 +65,7 @@ def generate_launch_description():
         package='diy_soft_gripper_driver',
         executable='client',
         arguments=[{default_state}]
+        # arguments=[]
     )
 
     nodes_to_start = [
