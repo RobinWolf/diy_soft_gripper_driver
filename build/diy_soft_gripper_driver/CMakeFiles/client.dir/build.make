@@ -69,28 +69,28 @@ include CMakeFiles/client.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/client.dir/flags.make
 
-CMakeFiles/client.dir/src/gripper_service_client.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/src/gripper_service_client.cpp.o: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client.cpp
-CMakeFiles/client.dir/src/gripper_service_client.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/src/gripper_service_client.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/src/gripper_service_client.cpp.o -MF CMakeFiles/client.dir/src/gripper_service_client.cpp.o.d -o CMakeFiles/client.dir/src/gripper_service_client.cpp.o -c /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client.cpp
+CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client_single_request.cpp
+CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o -MF CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o.d -o CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o -c /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client_single_request.cpp
 
-CMakeFiles/client.dir/src/gripper_service_client.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/gripper_service_client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client.cpp > CMakeFiles/client.dir/src/gripper_service_client.cpp.i
+CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client_single_request.cpp > CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.i
 
-CMakeFiles/client.dir/src/gripper_service_client.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/gripper_service_client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client.cpp -o CMakeFiles/client.dir/src/gripper_service_client.cpp.s
+CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client_single_request.cpp -o CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.s
 
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/src/gripper_service_client.cpp.o"
+"CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
-client: CMakeFiles/client.dir/src/gripper_service_client.cpp.o
+client: CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o
 client: CMakeFiles/client.dir/build.make
 client: /opt/ros/humble/lib/librclcpp.so
 client: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/lib/libgripper_interface__rosidl_typesupport_fastrtps_c.so

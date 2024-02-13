@@ -1,0 +1,8 @@
+In file included from [01m[K/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/include/diy_soft_gripper_driver/RobotConnection.hpp:20[m[K,
+                 from [01m[K/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_server.cpp:3[m[K:
+[01m[K/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/include/diy_soft_gripper_driver/DataFormat.hpp:23:36:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   23 |     struct __attribute__((packed)) [01;35m[K{[m[K
+      |                                    [01;35m[K^[m[K
+[01m[K/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/include/diy_soft_gripper_driver/DataFormat.hpp:37:36:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   37 |     struct __attribute__((packed)) [01;35m[K{[m[K
+      |                                    [01;35m[K^[m[K

@@ -87,6 +87,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/diy_soft_gripper_driver/" TYPE DIRECTORY FILES "/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/launch")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/diy_soft_gripper_driver")
 endif()
 

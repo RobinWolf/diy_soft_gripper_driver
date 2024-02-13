@@ -1,0 +1,223 @@
+[0.831s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.831s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f445e8fc370>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f445eb45cc0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f445eb45cc0>>)
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.869s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.869s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.878s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extension 'ignore'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extension 'ignore_ament_install'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extensions ['colcon_pkg']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extension 'colcon_pkg'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extensions ['colcon_meta']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extension 'colcon_meta'
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extensions ['ros']
+[0.879s] Level 1:colcon.colcon_core.package_identification:_identify(src/diy_soft_gripper_driver) by extension 'ros'
+[0.881s] DEBUG:colcon.colcon_core.package_identification:Package 'src/diy_soft_gripper_driver' with type 'ros.ament_cmake' and name 'diy_soft_gripper_driver'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extension 'ignore'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extension 'ignore_ament_install'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extensions ['colcon_pkg']
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extension 'colcon_pkg'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extensions ['colcon_meta']
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extension 'colcon_meta'
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extensions ['ros']
+[0.882s] Level 1:colcon.colcon_core.package_identification:_identify(src/gripper_interface) by extension 'ros'
+[0.882s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gripper_interface' with type 'ros.ament_cmake' and name 'gripper_interface'
+[0.882s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.882s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.882s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.882s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.882s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.959s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.959s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.984s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install
+[0.996s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/mathias/ros2_ws/install
+[1.010s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 352 installed packages in /opt/ros/humble
+[1.011s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.080s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'gripper_interface' is in: /home/mathias/ros2_ws/install/gripper_interface, /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding gripper_interface
+
+This may be promoted to an error in a future release of colcon-override-check.
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'cmake_args' from command line to 'None'
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'cmake_target' from command line to 'None'
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'cmake_clean_first' from command line to 'False'
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'cmake_force_configure' from command line to 'False'
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'ament_cmake_args' from command line to 'None'
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[1.093s] Level 5:colcon.colcon_core.verb:set package 'gripper_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.094s] DEBUG:colcon.colcon_core.verb:Building package 'gripper_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface', 'merge_install': False, 'path': '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/gripper_interface', 'symlink_install': False, 'test_result_base': None}
+[1.105s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'cmake_target' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'cmake_clean_first' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'cmake_force_configure' from command line to 'False'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'ament_cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[1.106s] Level 5:colcon.colcon_core.verb:set package 'diy_soft_gripper_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.106s] DEBUG:colcon.colcon_core.verb:Building package 'diy_soft_gripper_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver', 'merge_install': False, 'path': '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver', 'symlink_install': False, 'test_result_base': None}
+[1.119s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.133s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.133s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/gripper_interface' with build type 'ament_cmake'
+[1.133s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/gripper_interface'
+[1.148s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.148s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.148s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.236s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface -- -j16 -l16
+[1.592s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface -- -j16 -l16
+[1.694s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface
+[1.743s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gripper_interface)
+[1.744s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface
+[1.758s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface' for CMake module files
+[1.759s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface' for CMake config files
+[1.759s] Level 1:colcon.colcon_core.shell:create_environment_hook('gripper_interface', 'cmake_prefix_path')
+[1.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/cmake_prefix_path.ps1'
+[1.772s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/cmake_prefix_path.dsv'
+[1.773s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/cmake_prefix_path.sh'
+[1.774s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/lib'
+[1.774s] Level 1:colcon.colcon_core.shell:create_environment_hook('gripper_interface', 'ld_library_path_lib')
+[1.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/ld_library_path_lib.ps1'
+[1.786s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/ld_library_path_lib.dsv'
+[1.787s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/ld_library_path_lib.sh'
+[1.787s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/bin'
+[1.787s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/lib/pkgconfig/gripper_interface.pc'
+[1.787s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/lib/python3.10/site-packages'
+[1.787s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/bin'
+[1.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.ps1'
+[1.800s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.dsv'
+[1.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.sh'
+[1.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.bash'
+[1.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.zsh'
+[1.802s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/colcon-core/packages/gripper_interface)
+[1.886s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gripper_interface)
+[1.898s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface' for CMake module files
+[1.898s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface' for CMake config files
+[1.899s] Level 1:colcon.colcon_core.shell:create_environment_hook('gripper_interface', 'cmake_prefix_path')
+[1.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/cmake_prefix_path.ps1'
+[1.911s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/cmake_prefix_path.dsv'
+[1.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/cmake_prefix_path.sh'
+[1.912s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/lib'
+[1.912s] Level 1:colcon.colcon_core.shell:create_environment_hook('gripper_interface', 'ld_library_path_lib')
+[1.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/ld_library_path_lib.ps1'
+[1.924s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/ld_library_path_lib.dsv'
+[1.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/hook/ld_library_path_lib.sh'
+[1.925s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/bin'
+[1.925s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/lib/pkgconfig/gripper_interface.pc'
+[1.925s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/lib/python3.10/site-packages'
+[1.925s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/bin'
+[1.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.ps1'
+[1.937s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.dsv'
+[1.938s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.sh'
+[1.938s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.bash'
+[1.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/gripper_interface/package.zsh'
+[1.939s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface/share/colcon-core/packages/gripper_interface)
+[1.939s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver' with build type 'ament_cmake'
+[1.939s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver'
+[1.952s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.952s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.020s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver': CMAKE_PREFIX_PATH=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface:/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver:/home/mathias/ros2_ws/install/diy_robotics_gripper:/home/mathias/ros2_ws/install/gripper_interface:/home/mathias/ros2_ws/install/cpp_srvcli_gripper:/home/mathias/ros2_ws/install/cpp_service:/opt/ros/humble /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver -- -j16 -l16
+[5.133s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver' returned '0': CMAKE_PREFIX_PATH=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface:/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver:/home/mathias/ros2_ws/install/diy_robotics_gripper:/home/mathias/ros2_ws/install/gripper_interface:/home/mathias/ros2_ws/install/cpp_srvcli_gripper:/home/mathias/ros2_ws/install/cpp_service:/opt/ros/humble /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver -- -j16 -l16
+[5.170s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver': CMAKE_PREFIX_PATH=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface:/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver:/home/mathias/ros2_ws/install/diy_robotics_gripper:/home/mathias/ros2_ws/install/gripper_interface:/home/mathias/ros2_ws/install/cpp_srvcli_gripper:/home/mathias/ros2_ws/install/cpp_service:/opt/ros/humble /usr/bin/cmake --install /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver
+[5.182s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diy_soft_gripper_driver)
+[5.183s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver' returned '0': CMAKE_PREFIX_PATH=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface:/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver:/home/mathias/ros2_ws/install/diy_robotics_gripper:/home/mathias/ros2_ws/install/gripper_interface:/home/mathias/ros2_ws/install/cpp_srvcli_gripper:/home/mathias/ros2_ws/install/cpp_service:/opt/ros/humble /usr/bin/cmake --install /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/diy_soft_gripper_driver
+[5.195s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver' for CMake module files
+[5.196s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver' for CMake config files
+[5.196s] Level 1:colcon.colcon_core.shell:create_environment_hook('diy_soft_gripper_driver', 'cmake_prefix_path')
+[5.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/hook/cmake_prefix_path.ps1'
+[5.208s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/hook/cmake_prefix_path.dsv'
+[5.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/hook/cmake_prefix_path.sh'
+[5.209s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib'
+[5.209s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/bin'
+[5.209s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib/pkgconfig/diy_soft_gripper_driver.pc'
+[5.209s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib/python3.10/site-packages'
+[5.209s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/bin'
+[5.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.ps1'
+[5.222s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.dsv'
+[5.222s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.sh'
+[5.222s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.bash'
+[5.222s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.zsh'
+[5.223s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/colcon-core/packages/diy_soft_gripper_driver)
+[5.271s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diy_soft_gripper_driver)
+[5.283s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver' for CMake module files
+[5.284s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver' for CMake config files
+[5.284s] Level 1:colcon.colcon_core.shell:create_environment_hook('diy_soft_gripper_driver', 'cmake_prefix_path')
+[5.295s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/hook/cmake_prefix_path.ps1'
+[5.296s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/hook/cmake_prefix_path.dsv'
+[5.296s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/hook/cmake_prefix_path.sh'
+[5.297s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib'
+[5.297s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/bin'
+[5.297s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib/pkgconfig/diy_soft_gripper_driver.pc'
+[5.297s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/lib/python3.10/site-packages'
+[5.297s] Level 1:colcon.colcon_core.environment:checking '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/bin'
+[5.309s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.ps1'
+[5.309s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.dsv'
+[5.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.sh'
+[5.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.bash'
+[5.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/diy_soft_gripper_driver/package.zsh'
+[5.311s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/diy_soft_gripper_driver/share/colcon-core/packages/diy_soft_gripper_driver)
+[5.311s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.311s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.311s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.311s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.328s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.328s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.328s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.340s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.353s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/local_setup.ps1'
+[5.354s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/_local_setup_util_ps1.py'
+[5.356s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/setup.ps1'
+[5.373s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/local_setup.sh'
+[5.374s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/_local_setup_util_sh.py'
+[5.374s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/setup.sh'
+[5.388s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/local_setup.bash'
+[5.388s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/setup.bash'
+[5.402s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/local_setup.zsh'
+[5.402s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/setup.zsh'

@@ -223,29 +223,29 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
-src/gripper_service_client.o: src/gripper_service_client.cpp.o
-.PHONY : src/gripper_service_client.o
+src/gripper_service_client_single_request.o: src/gripper_service_client_single_request.cpp.o
+.PHONY : src/gripper_service_client_single_request.o
 
 # target to build an object file
-src/gripper_service_client.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/gripper_service_client.cpp.o
-.PHONY : src/gripper_service_client.cpp.o
+src/gripper_service_client_single_request.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o
+.PHONY : src/gripper_service_client_single_request.cpp.o
 
-src/gripper_service_client.i: src/gripper_service_client.cpp.i
-.PHONY : src/gripper_service_client.i
+src/gripper_service_client_single_request.i: src/gripper_service_client_single_request.cpp.i
+.PHONY : src/gripper_service_client_single_request.i
 
 # target to preprocess a source file
-src/gripper_service_client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/gripper_service_client.cpp.i
-.PHONY : src/gripper_service_client.cpp.i
+src/gripper_service_client_single_request.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.i
+.PHONY : src/gripper_service_client_single_request.cpp.i
 
-src/gripper_service_client.s: src/gripper_service_client.cpp.s
-.PHONY : src/gripper_service_client.s
+src/gripper_service_client_single_request.s: src/gripper_service_client_single_request.cpp.s
+.PHONY : src/gripper_service_client_single_request.s
 
 # target to generate assembly for a file
-src/gripper_service_client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/gripper_service_client.cpp.s
-.PHONY : src/gripper_service_client.cpp.s
+src/gripper_service_client_single_request.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.s
+.PHONY : src/gripper_service_client_single_request.cpp.s
 
 src/gripper_service_server.o: src/gripper_service_server.cpp.o
 .PHONY : src/gripper_service_server.o
@@ -288,9 +288,9 @@ help:
 	@echo "... uninstall"
 	@echo "... client"
 	@echo "... server"
-	@echo "... src/gripper_service_client.o"
-	@echo "... src/gripper_service_client.i"
-	@echo "... src/gripper_service_client.s"
+	@echo "... src/gripper_service_client_single_request.o"
+	@echo "... src/gripper_service_client_single_request.i"
+	@echo "... src/gripper_service_client_single_request.s"
 	@echo "... src/gripper_service_server.o"
 	@echo "... src/gripper_service_server.i"
 	@echo "... src/gripper_service_server.s"

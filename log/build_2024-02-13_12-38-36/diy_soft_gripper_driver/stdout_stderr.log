@@ -1,0 +1,10 @@
+[ 75%] [32mBuilding CXX object CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o[0m
+[ 75%] Built target server
+[01m[K/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client_single_request.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client_single_request.cpp:15:3:[m[K [01;31m[Kerror: [m[K‘[01m[KCLCPP_INFO[m[K’ was not declared in this scope; did you mean ‘[01m[KRCLCPP_INFO[m[K’?
+   15 |   [01;31m[KCLCPP_INFO[m[K(rclcpp::get_logger("gripper_control_client"), "Received command: %d", cmd);
+      |   [01;31m[K^~~~~~~~~~[m[K
+      |   [32m[KRCLCPP_INFO[m[K
+gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

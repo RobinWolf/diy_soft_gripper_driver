@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client.cpp" "CMakeFiles/client.dir/src/gripper_service_client.cpp.o" "gcc" "CMakeFiles/client.dir/src/gripper_service_client.cpp.o.d"
+  "/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/diy_soft_gripper_driver/src/gripper_service_client_single_request.cpp" "CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o" "gcc" "CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/client.dir/src/gripper_service_client.cpp.o"
-  "CMakeFiles/client.dir/src/gripper_service_client.cpp.o.d"
+  "CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o"
+  "CMakeFiles/client.dir/src/gripper_service_client_single_request.cpp.o.d"
   "client"
   "client.pdb"
 )

@@ -1,0 +1,32 @@
+[0.096s] Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/gripper_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface
+[0.109s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.241s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.251s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.253s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.256s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.285s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.537s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.704s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.923s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.946s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.967s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.967s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.967s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.980s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.993s] -- Configuring done
+[1.031s] -- Generating done
+[1.034s] -- Build files have been written to: /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface
+[1.041s] Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/gripper_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/install/gripper_interface
+[1.044s] Invoking command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface --clean-first -- -j16 -l16
+[1.318s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.330s] failed to create symbolic link '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface/ament_cmake_python/gripper_interface/gripper_interface' because existing path cannot be removed: Is a directory
+[1.331s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_gripper_interface.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_gripper_interface] Error 1
+[1.331s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.332s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_gripper_interface.dir/all] Error 2
+[1.332s] gmake[1]: *** Waiting for unfinished jobs....
+[1.556s] [  6%] Built target gripper_interface__cpp
+[1.576s] [  9%] [32mBuilding C object CMakeFiles/gripper_interface__rosidl_generator_c.dir/rosidl_generator_c/gripper_interface/srv/detail/gripper__functions.c.o[0m
+[1.641s] [ 12%] [32m[1mLinking C shared library libgripper_interface__rosidl_generator_c.so[0m
+[1.682s] [ 12%] Built target gripper_interface__rosidl_generator_c
+[1.683s] gmake: *** [Makefile:146: all] Error 2
+[1.686s] Invoked command in '/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/build/gripper_interface --clean-first -- -j16 -l16
