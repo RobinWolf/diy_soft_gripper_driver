@@ -13,7 +13,8 @@ find_package(gripper_interface REQUIRED)
 add_executable(server src/gripper_service_server.cpp)
 ament_target_dependencies(server rclcpp gripper_interface)
 
-add_executable(client src/gripper_service_client.cpp)
+add_executable(client src/gripper_service_client_single_request.cpp)
+#add_executable(client src/gripper_service_client.cpp)
 ament_target_dependencies(client rclcpp gripper_interface)
 
 install(TARGETS
