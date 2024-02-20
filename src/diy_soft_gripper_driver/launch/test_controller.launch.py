@@ -35,12 +35,19 @@ def generate_launch_description():
             description="The SSID from the common network (PC and ESP must be member of this network)",
         )
     )
-
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "default_state",
+            default_value="0",
+            description="The default state of the gripper after launching the control node (0: closed, 1: open)",
+        )
+    )
 
 
     gripper_ip = LaunchConfiguration("gripper_ip")
     gripper_ssid = LaunchConfiguration("gripper_ssid")
     gripper_port = LaunchConfiguration("gripper_port")
+    default_state = LaunchConfiguration("default_state")
 
 
 
@@ -53,9 +60,17 @@ def generate_launch_description():
         executable='server',
         arguments=[{gripper_ip}, {gripper_port}]
     )
+    #Client
+    client_node= Node(
+        package='diy_soft_gripper_driver',
+        executable='client',
+        arguments=[{default_state}] # for gripper_service_client_single_request
+        # arguments=[]      # for gripper_service_client --> 1 or 0 is passed into the terminal after starting the client
+    )
 
     nodes_to_start = [
         server_node,
+        client_node,
     ]
 
     return LaunchDescription(declared_arguments + nodes_to_start)
