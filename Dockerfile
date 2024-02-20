@@ -17,12 +17,6 @@ ENV USER=$USER
 RUN groupadd -g $GID $USER \
     && useradd -m -u $UID -g $GID --shell $(which bash) $USER   
 
-#install additional necessarity packages
-USER root
-RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-rclcpp
-RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-rosidl-default-generators
-RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-std-srvs
-USER ${USER}
 
 # Setup workpace
 USER $USER
@@ -44,10 +38,20 @@ RUN mkdir -p /home/$USER/dependencies/diy_soft_gripper_driver_ws/src
 RUN cd /home/$USER/dependencies/diy_soft_gripper_driver_ws/src && \
     git clone https://github.com/RobinWolf/diy_soft_gripper_driver.git
 
+
+#install additional necessarity packages
+USER root
+RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-rclcpp
+RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-rosidl-default-generators
+RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-std-srvs
+USER ${USER}
+
+
 # Build the diy-gripper package
 RUN cd /home/$USER/dependencies/diy_soft_gripper_driver_ws && \
     . /opt/ros/$ROS_DISTRO/setup.sh && \
     colcon build
+
 
 # Add built diy-gripper package to entrypoint
 USER root

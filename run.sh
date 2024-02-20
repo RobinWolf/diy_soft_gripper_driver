@@ -26,7 +26,7 @@ SRC_CONTAINER=/home/hephaestus/ros2_ws/src
 
 
 docker run \
-  --name soft_gripper_driver \
+  --name diy_gripper_driver \
   --rm \
   -it \
   --net=host \
