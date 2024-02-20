@@ -1,5 +1,4 @@
 #include "rclcpp/rclcpp.hpp"
-//#include "gripper_interface/srv/gripper.hpp"
 #include "std_srvs/srv/set_bool.hpp"
 
 int main(int argc, char **argv)

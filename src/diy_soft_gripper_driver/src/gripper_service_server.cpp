@@ -1,5 +1,4 @@
 #include "rclcpp/rclcpp.hpp"
-//#include "gripper_interface/srv/gripper.hpp"
 #include "diy_soft_gripper_driver/RobotConnection.hpp"
 #include "std_srvs/srv/set_bool.hpp"
 
