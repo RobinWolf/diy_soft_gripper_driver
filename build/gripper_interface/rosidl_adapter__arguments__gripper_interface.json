@@ -1,6 +1,0 @@
-{
-  "package_name": "gripper_interface",
-  "non_idl_tuples": [
-    "/home/mathias/ProjektarbeitDIYGreifer/diy_soft_gripper_driver/diy_soft_gripper_driver/src/gripper_interface:srv/Gripper.srv"
-  ]
-}
