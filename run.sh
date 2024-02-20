@@ -16,21 +16,20 @@ docker build \
   --build-arg ROS_DISTRO="$ROS_DISTRO" \
   --build-arg UID="$uid" \
   --build-arg GID="$gid" \
-  -f dev.Dockerfile \
+  -f Dockerfile \
   -t diy-softgripper-esp-driver/ros-render:"$ROS_DISTRO" .
 
 ##############################################################################
 ##                            Run the container                             ##
 ##############################################################################
 SRC_CONTAINER=/home/hephaestus/ros2_ws/src
-SRC_HOST="$(pwd)"/src
+
 
 docker run \
   --name soft_gripper_driver \
   --rm \
   -it \
   --net=host \
-  -v "$SRC_HOST":"$SRC_CONTAINER":rw \
   -e DISPLAY="$DISPLAY" \
   diy-softgripper-esp-driver/ros-render:"$ROS_DISTRO" bash
 
