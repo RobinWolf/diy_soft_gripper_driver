@@ -1,6 +1,8 @@
 #include "rclcpp/rclcpp.hpp"
-#include "gripper_interface/srv/gripper.hpp"
+//#include "gripper_interface/srv/gripper.hpp"
 #include "diy_soft_gripper_driver/RobotConnection.hpp"
+#include "std_srvs/srv/set_bool.hpp"
+
 
 class GripperControlServer : public rclcpp::Node
 {
@@ -24,8 +26,8 @@ public:
     }
 
     // Service-Callback for gripper server (connects to the interface defined in the gripper_srv_interface package)
-    auto grip_cb = [this](const std::shared_ptr<gripper_interface::srv::Gripper::Request> request,          //import the request and control interfaces from the srv in gripper_interface package
-                          std::shared_ptr<gripper_interface::srv::Gripper::Response> response) -> void {
+    auto grip_cb = [this](const std::shared_ptr<std_srvs::srv::SetBool::Request> request,          //import the request and control interfaces from the srv in gripper_interface package
+                          std::shared_ptr<std_srvs::srv::SetBool::Response> response) -> void {
 
       RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Incoming request cmd: %d", request->cmd);
 
@@ -60,14 +62,14 @@ public:
     };
 
     // build the gripper-service
-    gripper_service_ = create_service<gripper_interface::srv::Gripper>("gripper_control", grip_cb);
+    gripper_service_ = create_service<std_srvs::srv::SetBool>("gripper_control", grip_cb);
 
     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Gripper Control Server Ready");
   }
 
 private:
   RobotConnection robotConnection;
-  rclcpp::Service<gripper_interface::srv::Gripper>::SharedPtr gripper_service_;
+  rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr gripper_service_;
 };
 
 int main(int argc, char **argv)

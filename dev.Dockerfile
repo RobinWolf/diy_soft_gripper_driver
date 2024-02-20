@@ -18,10 +18,11 @@ RUN groupadd -g $GID $USER \
     && useradd -m -u $UID -g $GID -p "$(openssl passwd -1 $PASSWORD)" \
     --shell $(which bash) $USER -G sudo
 
-#install xacro package (additional necessarity when not using the ur-package from ros)
+#install additional necessarity packages
 USER root
-RUN apt-get update && apt-get install -y ros-humble-rclcpp
-RUN apt-get update && apt-get install -y ros-humble-rosidl-default-generators
+RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-rclcpp
+RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-rosidl-default-generators
+RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-std-srvs
 USER ${USER}
 
 # Setup workpace

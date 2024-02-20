@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
-#include "gripper_interface/srv/gripper.hpp"
+//#include "gripper_interface/srv/gripper.hpp"
+#include "std_srvs/srv/set_bool.hpp"
 
 int main(int argc, char **argv)
 {
@@ -19,14 +20,14 @@ int main(int argc, char **argv)
   }
 
   auto client = rclcpp::Node::make_shared("gripper_control_client");
-  auto grip_client = client->create_client<gripper_interface::srv::Gripper>("gripper_control");
+  auto grip_client = client->create_client<std_srvs::srv::SetBool>("gripper_control");
 
   while (!grip_client->wait_for_service(std::chrono::seconds(1)))
   {
     RCLCPP_INFO(client->get_logger(), "Waiting for the gripper service...");
   }
 
-  auto request = std::make_shared<gripper_interface::srv::Gripper::Request>();
+  auto request = std::make_shared<<std_srvs::srv::SetBool::Request>();
   request->cmd = cmd;
 
   // Send the service call
