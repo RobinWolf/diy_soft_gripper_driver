@@ -9,11 +9,9 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_srvs REQUIRED)
-find_package(gripper_interface REQUIRED)
 
 add_executable(server src/gripper_service_server.cpp)
-add_executable(client src/gripper_service_client_single_request.cpp)
-#add_executable(client src/gripper_service_client.cpp)
+add_executable(client src/gripper_service_test_client.cpp)
 
 #define dependencies for the executables
 ament_target_dependencies(client rclcpp std_srvs)
@@ -38,7 +36,6 @@ if(BUILD_TESTING)
 endif()
 
 #INSTALL directories to specific destination (only include for the used headers)
-
 install(
     DIRECTORY include
     DESTINATION include

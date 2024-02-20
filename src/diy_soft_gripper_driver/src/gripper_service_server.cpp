@@ -29,16 +29,16 @@ public:
     auto grip_cb = [this](const std::shared_ptr<std_srvs::srv::SetBool::Request> request,          //import the request and control interfaces from the srv in gripper_interface package
                           std::shared_ptr<std_srvs::srv::SetBool::Response> response) -> void {
 
-      RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Incoming request cmd: %d", request->cmd);
+      RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Incoming request data: %d", request->data);
 
-      if (request->cmd == 0 || request->cmd == 1)
+      if (request->data == 0 || request->data == 1)
       {
-        robotConnection.cmd_gripper = request->cmd;
+        robotConnection.cmd_gripper = request->data;
 
         if (!robotConnection.sendData())
         {
           RCLCPP_ERROR(this->get_logger(), "ERROR sending data to the robot.");
-          response->status = false;
+          response->success = false;
         }
 
         // Wait for the robot's response
@@ -47,17 +47,17 @@ public:
         if (!robotConnection.readData())
         {
           RCLCPP_ERROR(this->get_logger(), "ERROR receiving data from the robot.");
-          response->status = false;
+          response->success = false;
         }
         else
         {
-          response->status = true;
+          response->success = true;
         }
       }
       else
       {
         RCLCPP_ERROR(this->get_logger(), "Invalid input. Please enter 0 or 1.");
-        response->status = false;
+        response->success = false;
       }
     };
 

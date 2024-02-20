@@ -12,10 +12,10 @@ int main(int argc, char **argv)
     return 1;
   }
 
-  int cmd = std::stoi(argv[1]);
-  if (cmd != 0 && cmd != 1)
+  int data = std::stoi(argv[1]);
+  if (data != 0 && data != 1)
   {
-    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "Invalid command %d. Please provide 0 or 1 as an argument.", cmd);
+    RCLCPP_ERROR(rclcpp::get_logger("gripper_control_client"), "Invalid command %d. Please provide 0 or 1 as an argument.", data);
     return 1;
   }
 
@@ -27,8 +27,8 @@ int main(int argc, char **argv)
     RCLCPP_INFO(client->get_logger(), "Waiting for the gripper service...");
   }
 
-  auto request = std::make_shared<<std_srvs::srv::SetBool::Request>();
-  request->cmd = cmd;
+  auto request = std::make_shared<std_srvs::srv::SetBool::Request>();
+  request->data = data;
 
   // Send the service call
   auto result_future = grip_client->async_send_request(request);
@@ -42,9 +42,9 @@ int main(int argc, char **argv)
   }
 
   auto response = result_future.get();
-  if (response->status)
+  if (response->success)
   {
-    RCLCPP_INFO(client->get_logger(), "Input accepted. Gripper %s", (cmd ? "close" : "open"));
+    RCLCPP_INFO(client->get_logger(), "Input accepted. Gripper %s", (data ? "close" : "open"));
   }
   else
   {
