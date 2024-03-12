@@ -5,7 +5,7 @@ This ROS2 package contains the driver for the gripper of our DIY-Robot. This dri
 
 We use Docker for development (dev branch) and deployment (main branch) to avoid version and dependency issues. To run the package, you just have to source the run.sh script file. The container will start and you can work with the provided package, modify it, or include it as a dependency to another package!
 
-Refer to the [overview README.md of the ROS-Packages](https://github.com/mathias31415/diy_robotics/blob/main/ROS-Packages/README.md) for a general overview.
+Refer to the [overview README.md of the ROS-Packages](ROS-Packages/README.md) for a general overview.
 
 
 ## Package Structure
